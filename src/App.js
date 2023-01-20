@@ -1,8 +1,13 @@
+import React from 'react';
 import './App.css';
-import { Link } from 'react-router-dom';
+import {
+  Link, BrowserRouter, Routes, Route,
+} from 'react-router-dom';
+import Booklist from './components/Booklist';
+import Categories from './components/Categories';
 
 const App = () => (
-  <div className="App">
+  <BrowserRouter>
     <header>
       <nav>
         <ul>
@@ -15,7 +20,11 @@ const App = () => (
         </ul>
       </nav>
     </header>
-  </div>
+    <Routes>
+      <Route index element={<Booklist />} />
+      <Route path="/categories" element={<Categories />} />
+    </Routes>
+  </BrowserRouter>
 );
 
 export default App;
