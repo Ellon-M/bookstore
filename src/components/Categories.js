@@ -12,7 +12,7 @@ const Categories = () => {
   return (
     <>
       {!category && <button type="button" onClick={handleClick}>Check Status</button>}
-      <h1 className='category-status'>{category}</h1>
+      <h1 className="category-status">{category}</h1>
     </>
   );
 };
