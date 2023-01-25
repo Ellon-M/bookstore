@@ -1,16 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
+// Types
+const ADD_BOOK = 'ADD_BOOK';
+const REMOVE_BOOK = 'REMOVE_BOOK';
 
-export const bookSlice = createSlice({
-  name: 'book',
-  initialState: [],
-  reducers: {
-    addBook: (state, { payload }) => {
-      state.push(payload);
-    },
-    removeBook: (state, { payload }) => state.filter(({ id }) => id !== payload),
-  },
-});
+const initialState = [];
 
-export const { addBook, removeBook } = bookSlice.actions;
+// Action Creators
+export const addBook = (addedBook) => ({ type: ADD_BOOK, payload: addedBook });
 
-export default bookSlice.reducer;
+export const removeBook = (id) => ({ type: REMOVE_BOOK, id });
+
+const bookReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_BOOK:
+      return [...state, action.payload];
+    default:
+      return state;
+  }
+};
+
+export default bookReducer;
