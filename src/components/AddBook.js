@@ -30,19 +30,20 @@ const AddBook = () => {
 
   return (
     <div className="mb-2">
-      <div>
-        <h3>Add a new book: </h3>
-      </div>
+      <h3 className="text-gray-500 font-bold text-2xl">Add New Book</h3>
 
       <form onSubmit={handleSubmit}>
-        <input className="border border-black mr-2" type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <input className="border border-black" type="text" name="author" value={author} onChange={(e) => setAuthor(e.target.value)} />
-        <select name="category" onChange={(e) => setCategory(e.target.value)}>
+        <input className="border-b border-[#a0a0a0] outline-none mr-2 p-2" placeholder="Title" type="text" name="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+
+        <input className="border-b border-[#a0a0a0] outline-none mr-2 p-2" placeholder="Author" type="text" name="author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+
+        <select className="py-3 px-5 outline-none cursor-pointer bg-white border rounded-md border-[#a0a0a0]" name="category" onChange={(e) => setCategory(e.target.value)}>
           {categories && categories.map((category) => (
             <option value={category} key={category}>{category}</option>
           ))}
         </select>
-        <button type="submit" className="bg-gray-100 ml-5 p-2">Add Book</button>
+
+        <button type="submit" className="bg-[#0290ff] ml-2 py-2 px-5 text-white font-semibold">Add Book</button>
       </form>
     </div>
   );

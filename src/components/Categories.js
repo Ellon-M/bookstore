@@ -11,7 +11,7 @@ const Categories = () => {
 
   return (
     <>
-      {!category && <button type="button" onClick={handleClick}>Check Status</button>}
+      {!category && <button type="button" className="bg-[#0290ff] ml-2 py-2 px-5 text-white font-semibold" onClick={handleClick}>Check Status</button>}
       <h1 className="category-status">{category}</h1>
     </>
   );

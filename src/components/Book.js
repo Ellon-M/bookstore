@@ -12,11 +12,16 @@ const Book = ({
   };
 
   return (
-    <div className="my-5">
+    <div className="my-5 border-b">
       <p className="font-bold text-gray-500">{category}</p>
       <h4 className="font-bold text-3xl">{title}</h4>
       <p className="text-blue-600">{author}</p>
-      <button type="button" className="bg-gray-100 p-2" onClick={handleClick}>Remove</button>
+
+      <div className="space-x-5 my-5">
+        <button type="button" className="border-r-2 pr-3 text-blue-500">Comments</button>
+        <button type="button" className="border-r-2 pr-3 text-blue-500" onClick={handleClick}>Remove</button>
+        <button type="button" className="text-blue-500">Edit</button>
+      </div>
     </div>
   );
 };
