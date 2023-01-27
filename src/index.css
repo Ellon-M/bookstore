@@ -1,8 +1,41 @@
 body {
   margin: 0;
   background-color: #f5f6fa;
+  font-family: 'Inter', sans-serif;
+}
+
+.progress-container {
+  width: 5.625rem;
+  height: 5.625rem;
+  padding: 0.63rem 0.625rem 0.75rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress {
+  position: absolute;
+  border-radius: 50%;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.percentage-complete {
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  font-size: 0.875rem;
+  opacity: 0.5;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap');

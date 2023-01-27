@@ -15,14 +15,14 @@ const Booklist = () => {
   return (
     <>
       {books.map((book) => (
-        <ul key={book.id}>
+        <div key={book.id}>
           <Book
             item_id={book.id}
             title={book.title}
             author={book.author}
             category={book.category}
           />
-        </ul>
+        </div>
       ))}
       <AddBook />
     </>
