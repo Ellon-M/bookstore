@@ -26,10 +26,12 @@
       "react/react-in-jsx-scope": "off",
       "import/no-unresolved": "off",
       "no-shadow": "off",
-      "default-param-last": 0
+      "default-param-last": 0,
+      "camelcase": "off"
     },
     "ignorePatterns": [
       "dist/",
       "build/"
     ]
   }
+  
